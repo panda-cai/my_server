@@ -6,7 +6,6 @@ DROP DATABASE IF EXISTS z_home;
 CREATE DATABASE z_home CHARSET=UTF8;
 #进入数据库
 USE z_home;
-
 #创建数据表
 CREATE TABLE carousel(
 	cid INT PRIMARY KEY AUTO_INCREMENT, #图片id
