@@ -50,9 +50,9 @@ INSERT INTO index_show VALUES
 #创建体验家表
 CREATE TABLE trial(
 	tid INT PRIMARY KEY AUTO_INCREMENT, #id
-	showimg VARCHAR(128), #地址
-	title VARCHAR(64),#标题
-	is_show INT
+	showimg VARCHAR(128), #图片地址
+	showtitle VARCHAR(64),#标题
+	is_show INT #是否展示到首页
 );
 
 #向表中插入数据
@@ -62,3 +62,41 @@ INSERT INTO trial VALUES
 (NULL,"images/index_trial/trial_p3.jpg","遇见新活力",1),
 (NULL,"images/index_trial/trial_p4.jpg","温馨雅致幻想生活",1),
 (NULL,"images/index_trial/trial_p5.jpg","欧式简约风",1);
+
+#创建商品表
+CREATE TABLE product(
+	pid INT PRIMARY KEY AUTO_INCREMENT, #商品id
+	showimg VARCHAR(128),#展示图片
+	title VARCHAR(128),#商品标题
+	subtitle VARCHAR(128),#商品副标题
+	price DECIMAL(10,2),
+	subprice DECIMAL(10,2),
+	p_class VARCHAR(32),
+	detail_class VARCHAR(32),
+	is_show INT
+);
+#插入数据
+INSERT INTO product VALUES
+(NULL,"images/product/chair1.png","日式简约休闲椅 | 黄铜铁艺","靠背木材弯曲工艺|贴合人体曲线|厚实皮革椅面","1460.00","2920.00","chair","dining",1),
+(NULL,"images/product/chair2.png","日式简约休闲椅 | 黄铜铁艺","靠背木材弯曲工艺|贴合人体曲线|厚实皮革椅面","1460.00","2920.00","chair","dining",1),
+(NULL,"images/product/chair3.png","日式简约休闲椅 | 黄铜铁艺","靠背木材弯曲工艺|贴合人体曲线|厚实皮革椅面","1460.00","2920.00","chair","dining",1),
+(NULL,"images/product/chair4.png","日式简约休闲椅 | 黄铜铁艺","靠背木材弯曲工艺|贴合人体曲线|厚实皮革椅面","1460.00","2920.00","chair","dining",1),
+(NULL,"images/product/chair5.png","日式简约休闲椅 | 黄铜铁艺","靠背木材弯曲工艺|贴合人体曲线|厚实皮革椅面","1460.00","2920.00","chair","dining",1),
+(NULL,"images/product/chair6.png","日式简约休闲椅 | 黄铜铁艺","靠背木材弯曲工艺|贴合人体曲线|厚实皮革椅面","1460.00","2920.00","chair","dining",1)
+#创建图片表
+
+
+#创建灵感表
+CREATE TABLE inspiration(
+	id INT PRIMARY KEY AUTO_INCREMENT, #灵感id
+	imgurl VARCHAR(128), #灵感图片url
+	exp VARCHAR(128), #灵感说明
+	publish_date VARCHAR(32), #发表时间
+	like_num INT, #被标记喜欢的个数
+	is_show INT  #是否展示到首页
+);
+#向灵感表插入数据
+INSERT INTO inspiration VALUES
+(NULL,"images/inspiration/inspiration1.jpg","啥灵感都没有","2018年5月20日",15,1),
+(NULL,"images/inspiration/inspiration2.jpg","啥灵感都没有","2018年5月20日",15,1),
+(NULL,"images/inspiration/inspiration3.jpg","啥灵感都没有","2018年5月20日",15,1);

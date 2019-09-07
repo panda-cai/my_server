@@ -25,11 +25,18 @@ router.get("/show", (req, res) => {
 });
 
 router.get("/index_trial",(req,res)=>{
-  pool.query(`SELECT title,showimg FROM trial WHERE is_show=?`,[true],(err,result)=>{
+  pool.query(`SELECT showtitle,showimg FROM trial WHERE is_show=?`,[true],(err,result)=>{
     if(err) throw err;
     res.send(result);
   });
 });
 
+router.get("/index_inspiration",(req,res)=>{
+  pool.query(`SELECT imgurl,exp FROM inspiration WHERE is_show=?`,[1],(err,result)=>{
+    if(err) throw err;
+    // console.log(result);
+    res.send(result);
+  });
+});
 // 抛出路由对象
 module.exports=router;
