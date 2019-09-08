@@ -65,7 +65,7 @@ INSERT INTO trial VALUES
 
 #创建商品表
 CREATE TABLE product(
-	pid INT PRIMARY KEY AUTO_INCREMENT, #商品id
+	pid INT PRIMARY KEY AUTO_INCREMENT, #商品pid
 	showimg VARCHAR(128),#展示图片
 	title VARCHAR(128),#商品标题
 	subtitle VARCHAR(128),#商品副标题
@@ -82,7 +82,7 @@ INSERT INTO product VALUES
 (NULL,"images/product/chair3.png","日式简约休闲椅 | 黄铜铁艺","靠背木材弯曲工艺|贴合人体曲线|厚实皮革椅面","1460.00","2920.00","chair","dining",1),
 (NULL,"images/product/chair4.png","日式简约休闲椅 | 黄铜铁艺","靠背木材弯曲工艺|贴合人体曲线|厚实皮革椅面","1460.00","2920.00","chair","dining",1),
 (NULL,"images/product/chair5.png","日式简约休闲椅 | 黄铜铁艺","靠背木材弯曲工艺|贴合人体曲线|厚实皮革椅面","1460.00","2920.00","chair","dining",1),
-(NULL,"images/product/chair6.png","日式简约休闲椅 | 黄铜铁艺","靠背木材弯曲工艺|贴合人体曲线|厚实皮革椅面","1460.00","2920.00","chair","dining",1)
+(NULL,"images/product/chair6.png","日式简约休闲椅 | 黄铜铁艺","靠背木材弯曲工艺|贴合人体曲线|厚实皮革椅面","1460.00","2920.00","chair","dining",1);
 #创建图片表
 
 
