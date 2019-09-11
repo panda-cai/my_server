@@ -50,5 +50,24 @@ router.get("/index_product",(req,res)=>{
     // console.log(result);
   })
 })
+
+//获取show面板中designshow
+router.get("/index_design",(req,res)=>{
+  pool.query(`SELECT did,showimg,title FROM design_show`,(err,result)=>{
+    if(err) throw err;
+    res.send(result);
+  });
+})
+// 获取show面板中所有的灵感
+router.get("/show_inspiration", (req, res) => {
+  pool.query(
+    `SELECT imgurl,exp,like_num,comment_num FROM inspiration LIMIT 0,3`,
+    (err, result) => {
+      if (err) throw err;
+      // console.log(result);
+      res.send(result);
+    }
+  );
+});
 // 抛出路由对象
 module.exports=router;

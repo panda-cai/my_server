@@ -22,6 +22,8 @@ server.use(
     credentials: true
   })
 );
+// 挂载静态资源目录
+server.use(express.static("public"));
 
 // 挂载user路由
 server.use("/user",userRouter);
