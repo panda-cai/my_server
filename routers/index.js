@@ -69,5 +69,9 @@ router.get("/show_inspiration", (req, res) => {
     }
   );
 });
+router.get("/productClass",(req,res)=>{
+	var list=[];
+	pool.query('SELECT ')
+});
 // 抛出路由对象
 module.exports=router;

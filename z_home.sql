@@ -119,3 +119,14 @@ INSERT INTO design_show VALUES
 (NULL,3,"http://127.0.0.1:3001/images/design/designshow3.jpg","时光里唯一不变的准则是我喜欢"),
 (NULL,3,"http://127.0.0.1:3001/images/design/designshow4.jpg","准备一下夏天的卧室"),
 (NULL,3,"http://127.0.0.1:3001/images/design/designshow5.jpg","尽量把小朋友休息区需要的东西摆齐了");
+
+#创建商品主要分类表
+CREATE TABLE main_class(
+	mid INT PRIMARY KEY  AUTO_INCREMENT, #主要分类id
+	main_class VARCHAR(32), #主要分类名称
+	main_title VARCHAR(32),#主要分类标题
+	showimg VARCHAR(128) #主要分类图片
+);
+
+INSERT INTO main_class VALUES
+(NULL,"sofa","沙发","")
