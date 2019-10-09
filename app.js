@@ -8,8 +8,10 @@ const userRouter=require("./routers/user");
 //导入index路由
 const index=require("./routers/index");
 //导入商品理由
-const product=require("./routers/product")
+const product=require("./routers/product");
 //创建服务器
+const session = require("express-session");
+// 引入session
 const server=express();
 //监听端口
 server.listen(5050);
@@ -17,6 +19,16 @@ server.listen(5050);
 server.use(bodyParser.urlencoded({
 	extended:false
 }));
+
+// 配置session
+server.use(
+  session({
+    secret: "128位的字符串", //安全字符创
+    resave: true, //每次请求保存数据
+    saveUninitialized: true //保存初始化数据
+  })
+);
+
 //配置跨域请求路径
 server.use(
   cors({
@@ -32,3 +44,5 @@ server.use("/user",userRouter);
 //挂在index路由
 server.use("/index",index);
 server.use("/product",product);
+
+

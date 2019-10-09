@@ -192,3 +192,11 @@ INSERT INTO minor_class VALUES
 (NULL,"台灯","http://127.0.0.1:5050/images/class/lamp_13.jpg",8),
 (NULL,"落地灯","http://127.0.0.1:5050/images/class/lamp_14.jpg",8),
 (NULL,"吸顶灯","http://127.0.0.1:5050/images/class/lamp_17.jpg",8);
+
+#建立用户表
+CREATE TABLE user(
+	uid INT PRIMARY KEY AUTO_INCREMENT,
+	uname VARCHAR(64),
+	phone CHAR(11),
+	upwd VARCHAR(128)
+);
