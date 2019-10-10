@@ -206,6 +206,8 @@ CREATE TABLE user(
 #创建购物车表
 CREATE TABLE cart(
 	c_id INT PRIMARY KEY AUTO_INCREMENT,
+	title VARCHAR(128),
+	price DECIMAL(10,2),
 	pid INT,
 	uid INT,
 	show_img VARCHAR(128),
